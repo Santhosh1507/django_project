@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Item</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <div class="container mx-auto px-4 py-8">
+        <h2 class="text-3xl font-bold mb-6 text-center">Update Item</h2>
+        <div class="bg-white shadow-lg rounded-lg p-6 max-w-md mx-auto">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="space-y-4">
+                    {{ form.as_p|safe }}
+                </div>
+                <button type="submit" class="mt-4 w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition duration-200">Update Item</button>
+                <a href="{% url 'item_list' %}" class="mt-2 inline-block text-blue-500 text-sm hover:text-blue-700 transition">Cancel</a>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

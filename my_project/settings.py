@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "my_app",
 ]
 
 MIDDLEWARE = [
@@ -94,16 +95,28 @@ WSGI_APPLICATION = "my_project.wsgi.application"
 
 # settings.py
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'django_app_uq5w',                    # Database name
+#         'USER': 'django_app_uq5w_user',               # Database user
+#         'PASSWORD': 'rm2ICxn6XZDV2y37KV3y5hIGvqJQA8em',  # Password
+#         'HOST': 'dpg-ct0911tumphs73f2fek0-a.singapore-postgres.render.com',  # Hostname
+#         'PORT': '5432',                               # Default PostgreSQL port
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'django_app_uq5w',                    # Database name
-        'USER': 'django_app_uq5w_user',               # Database user
+        'ENGINE': 'django.db.backends.postgresql',       # Use PostgreSQL backend
+        'NAME': 'django_app_uq5w',                       # Database name
+        'USER': 'django_app_uq5w_user',                  # Username
         'PASSWORD': 'rm2ICxn6XZDV2y37KV3y5hIGvqJQA8em',  # Password
         'HOST': 'dpg-ct0911tumphs73f2fek0-a.singapore-postgres.render.com',  # Hostname
-        'PORT': '5432',                               # Default PostgreSQL port
+        'PORT': '5432',                                  # Default PostgreSQL port
     }
 }
+
 
 
 
